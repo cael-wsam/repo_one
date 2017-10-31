@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>PracticeProj</title>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.1/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	
+	
+	<script src="/practiceProj/js/config.js"></script>
+	
+	<!-- ag-grid -->
+	<script>
+		document.write(
+			'<script src="/practiceProj/lib/agGrid/ag-grid.js?v='+version+'\"><\/script>'		
+		);
+	</script>
+
+
+	<!-- Angular  -->
+	<script>
+		document.write(
+			'<script src="/practiceProj/lib/angular/angular.js?v='+version+'\"><\/script>'
+			+'<script src="/practiceProj/lib/angular/angular-resource.js?v='+version+'\"><\/script>'
+			+'<script src="/practiceProj/lib/angular/angular-route.js?v='+version+'\"><\/script>'
+		);
+	</script>
+	
+	<!-- bootstrap -->
+	<script>
+		document.write(
+			'<script src="/practiceProj/lib/bootstrap-3.1.1/js/ui-bootstrap-tpls-1.2.5.js?v='+version+'\"><\/script>'		
+		);
+	</script>
+	
+	<!-- external css -->
+	<!-- <script>
+		document.write(
+			'<link href="/practiceProj/lib/bootstrap-3.1.1/css/bootstrap.css?v='+version+'\" rel="stylesheet" type="text/css" />'	
+		);
+	</script> -->
+
+	<!-- custom  JS | custom controllers -->
+	<script>
+		document.write(
+			 '<script src="/practiceProj/js/app.js?v='+version+'\"><\/script>'
+			+'<script src="/practiceProj/js/controller/loginController.js?v='+version+'\"><\/script>'
+		);
+	</script>
+	
+	<!-- custom  JS | custom services -->
+	<script>
+		document.write(
+			'<script src="/practiceProj/js/service/loginService.js?v='+version+'\"><\/script>'	
+		);
+		
+		history.pushState(null, null, location.href);
+		window.onpopstate = function (){
+			history.go(1);
+		};
+	</script>
+</head>
+<body data-ng-app="myapp">
+	<!-- <div data-ui-view=""></div> -->
+	<div ng-view="myapp">
+	
+	</div>
+</body>
+</html>
